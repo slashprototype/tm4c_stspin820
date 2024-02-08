@@ -7,9 +7,10 @@
 
 #ifndef SRC_DRIVERS_STSPIN820_STSPIN820_DRIVER_H_
 #define SRC_DRIVERS_STSPIN820_STSPIN820_DRIVER_H_
-
+/// \cond
 #include <stdint.h>
 #include <stdbool.h>
+/// \endcond
 #include <tm4c_utils/pins.h>
 
 /* Step mode pre-scaler selection*/
