@@ -5,8 +5,8 @@
  *      Author: JUARELU1
  */
 
-#ifndef SRC_DRIVERS_STSPIN820_STSPIN820_DRIVER_H_
-#define SRC_DRIVERS_STSPIN820_STSPIN820_DRIVER_H_
+#ifndef SRC_DRIVERS_TM4C_STSPIN820_STSPIN820_DRIVER_H_
+#define SRC_DRIVERS_TM4C_STSPIN820_STSPIN820_DRIVER_H_
 /// \cond
 #include <stdbool.h>
 #include <stdint.h>
@@ -43,7 +43,7 @@ struct stspin820_driver {
     pin_t* m2;
     pin_t* m3;
     uint16_t step_mode;
-    uint32_t speed_ml_min;
+    uint32_t frequency_hz;
     timer_module_t* timer;
     void (*runForward)(stspin820_driver_t*, uint32_t);
     void (*runBackward)(stspin820_driver_t*, uint32_t);
@@ -51,10 +51,9 @@ struct stspin820_driver {
     void (*disable)(stspin820_driver_t*);
     void (*standBy)(stspin820_driver_t*);
     void (*configStepMode)(stspin820_driver_t*, step_mode_t);
-    void (*configureSpeed)(stspin820_driver_t*, uint32_t);
 };
 
 /* Assign local functions and another initial local configuration*/
 void setupStepMotor(stspin820_driver_t* driver, step_mode_t step_mode);
 
-#endif /* SRC_DRIVERS_STSPIN820_STSPIN820_DRIVER_H_ */
+#endif /* SRC_DRIVERS_TM4C_STSPIN820_STSPIN820_DRIVER_H_ */
